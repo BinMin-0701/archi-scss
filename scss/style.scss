@@ -78,6 +78,9 @@ nav {
       &:hover {
         background: var(--text-gray-500);
         border-radius: 25px;
+        a {
+          color: var(--bs-white);
+        }
       }
     }
 

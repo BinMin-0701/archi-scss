@@ -1,4 +1,5 @@
 @import './variables';
+@import "../bootstrap/css/bootstrap.css";
 
 // Size - Line-height - font-weight
 @mixin text-font ($font-size, $line-height, $font-w: 400) {
