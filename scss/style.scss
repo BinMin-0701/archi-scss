@@ -152,7 +152,7 @@ nav {
 // services
 .slick {
   &-index-service{
-    @include xl {
+    @include media-breakpoint-up(xl) {
       padding-top: 360px;
     }
   }
