@@ -1,0 +1,32 @@
+:root {
+  --text-brand-02: #C7624C;
+  --text-brand-04: #E9E8E8;
+  --text-gray-500: #737373;
+  --text-gray-700: #404040;
+  --text-gray-900: #171717;
+  --border-brand-04: #E9E8E8;
+  --border-gray-700: #404040;
+  --border-gray-900: #171717;
+}
+
+//breakpoint
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$body-bg-light : #F8F7F7;
+$body-bg-dark: #171717;
+$gap: 8px;

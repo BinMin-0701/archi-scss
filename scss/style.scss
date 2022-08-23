@@ -1,0 +1,460 @@
+@import "./variables";
+@import "./mixins";
+@import "../bootstrap/css/bootstrap.css";
+
+body {
+  background: $body-bg-light  !important;
+  max-width: 1920px;
+  @include text-font(16px, 28px);
+  font-family: "Satoshi Light" !important;
+}
+
+h1, h3, h4, h5, p {
+  margin: 0 !important;
+}
+
+p {
+  color: var(--text-gray-700);
+}
+
+h1 {
+  @include text-font(48px, 48px, 300);
+  letter-spacing: -0.02em;
+  @include md {
+    @include text-font(90px, 96px,300);
+  }
+}
+
+h2 {
+  @include text-font(48px, 60px);
+}
+
+h3 {
+  @include text-font(21px, 28px);
+  color: var(--text-gray-900);
+}
+
+h4 {
+  color: var(--text-gray-900);
+  @include text-font(20px, 36px);
+}
+
+h5 {
+  @include text-font(15px, 28px);
+  color: var(--text-brand-02);
+}
+
+h6 {
+  @include text-font(12px, 16px, 700);
+  color: var(--text-gray-500);
+}
+
+.section {
+  border-top: 1px solid var(--border-brand-04);
+  padding: 120px 0;
+  @include lg {
+    padding: 160px 0;
+  }
+}
+
+.title {
+  h2 {
+    max-width: 576px !important;
+    padding-top: 16px
+  }
+  
+  h4 {
+    max-width: 576px !important;
+    padding-top: 24px;
+  }
+}
+
+//nav
+nav {
+  .navbar-nav {
+    li {
+      padding: 34px 24px;
+      // margin-left: 48px;
+      &:hover {
+        background: var(--text-gray-500);
+        border-radius: 25px;
+      }
+    }
+
+    a {
+      color: var(--text-gray-900);
+      padding: 0 !important;
+    }
+  }
+
+  .brand a {
+    @include text-font(21px, 28px);
+  }
+}
+
+// hero
+.hero {
+  h1 {
+    color: var(--text-gray-900);
+  }
+
+  h4 {
+    color: var(--text-gray-700);
+    max-width: 576px;
+    padding-top: 24px;
+  }
+
+  &-button {
+    gap: $gap*3;
+    padding-top: 72px;
+    @include xl {
+      padding-bottom: 330px;
+    }
+
+  .button {
+    a {
+      @include button-font($section-color: flase);
+    }
+    :Hover {
+      @include btn-hover ($bg: light);
+    }
+  }
+  }
+
+  .banner {
+    padding-top: 80px;
+    @include xl {
+      bottom: -360px;
+      height: 722px;
+      padding-top: 0;
+      position: absolute;
+      @include calc(map-get($container,'xl') );
+    }
+
+    @include xxl {
+      @include calc(map-get($container, 'xxl'));
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// services
+.slick {
+  &-index-service{
+    @include xl {
+      padding-top: 360px;
+    }
+  }
+
+  &-content {
+    padding: 72px 0;
+
+    &-box {
+      width: 360px !important;
+      margin-right: 72px;
+
+      h3 {
+        padding: 24px 0 0;
+      }
+
+      p {
+        padding-top: 16px;
+      }
+
+      a {
+        padding-top: 24px;
+      }
+    }
+  }
+
+  .button {
+    a {
+      @include button-font($section-color: true);
+    }
+  }
+}
+
+#slick-services {
+  background: $body-bg-dark;
+
+  h2 {
+    color: var(--bs-white);
+  }
+
+  h3 {
+    color: var(--bs-white);
+  }
+
+  h4 {
+    color: var(--text-brand-04);
+  }
+
+  p {
+    color: var(--text-brand-04);
+  }
+
+  a {
+    @include a-font ($border-color: flase);
+    &:hover {
+      @include a-hover;
+    }
+  }
+
+  .button {
+    a {
+      @include button-font($section-color: true);
+    }
+    :hover {
+      @include btn-hover ($bg: dark);
+    }
+  }
+}
+
+// introducing
+.introducing {
+  .title {
+    h4 {
+      @include md {
+        margin-left: 264px !important;
+      }
+    }
+  }
+
+  &-content {
+    gap: $gap*10;
+    padding-top: 72px;
+
+    @include md {
+      grid-template-columns: auto auto;
+    }
+
+    @include lg {
+      gap: $gap*22.5;
+    }
+
+    h3 {
+      padding-top: 24px;
+    }
+
+    p {
+      padding: 16px 0;
+    }
+
+    a {
+      @include a-font($border-color: true);
+      &:hover {
+        @include a-hover;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Projects.
+#slick-index-project {
+  img {
+    height: 450px;
+    width: 100%;
+  }
+
+  span {
+    padding-top: 4px;
+  }
+
+  .button {
+    a {
+      @include button-font($section-color: flase);
+    }
+    :hover {
+      @include btn-hover ($bg: light);
+    }
+  }
+}
+
+// awards
+.awards {
+  @include lg {
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .title {
+    max-width: inherit;
+  }
+
+  &-content {
+    max-width: 684px !important;
+
+    &-list {
+      padding: 48px 0;
+
+      &-item {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--text-brand-04);
+      }
+
+      #list-first {
+        border-top: 1px solid var(--text-brand-04);
+      }
+    }
+
+    .button {
+      a {
+        @include button-font($section-color: flase);
+      }
+      :hover {
+        @include btn-hover ($bg: light);
+      }
+    }
+  }
+}
+
+//Journal.
+.journal {
+  &-content {
+    @include lg {
+      justify-content: space-between;
+
+      &-box {
+        max-width: 276px !important;
+      }
+    }
+
+    &-box {
+      padding-top: 64px;
+      img {
+        width: 100%;
+      }
+
+      a {
+        @include a-font($border-color: true);
+        &:hover {
+          @include a-hover;
+        }
+      }
+    }
+  }
+}
+
+//question
+.question {
+  background: $body-bg-dark;
+
+  .container {
+    @include lg {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 {
+      color: var(--bs-white);
+    }
+  }
+
+  &-button {
+    gap: $gap*6;
+    padding-top: 24px;
+    @include lg {
+      padding-top: 0;
+    }
+    #contact_us {
+      a {
+        @include button-font($section-color: true);
+        color: var(--text-gray-900) !important;
+        background: var(--bs-white) !important;
+      }
+      :hover {
+        @include btn-hover ($bg: light)
+      }
+    }
+  
+    #browse {
+      a {
+        @include button-font($section-color: true);
+      }
+      :hover {
+        @include btn-hover ($bg: dark)
+      }
+    }
+  }
+
+}
+
+// 
+.information {
+  padding: 96px 0;
+
+  .box {
+    max-width: 252px;
+  }
+
+  .information-content {
+    border-bottom: 1px solid var(--border-brand-04);
+    padding-bottom: 80px;
+  }
+
+  &-content {
+    @include md {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .archi {
+
+      p {
+        padding-top: 18px;
+      }
+
+      .social {
+        gap: $gap;
+
+        div {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: #E9E8E8;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+      }
+    }
+
+    .contact-information {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $gap;
+
+      h4 {
+        padding-bottom: 12px;
+      }
+
+      p {
+        padding: 4px 0;
+      }
+
+      .contact {
+        padding-bottom: 32px;
+      }
+    }
+  }
+
+  .end-page {
+    &-right span {
+      color: var(--text-gray-700);
+      border-bottom: 1px solid var(--border-brand-04);
+    }
+  }
+}
