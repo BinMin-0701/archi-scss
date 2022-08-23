@@ -152,7 +152,7 @@ nav {
 // services
 .slick {
   &-index-service{
-    @include media-breakpoint-up(xl) {
+    @include xl {
       padding-top: 360px;
     }
   }
@@ -412,16 +412,9 @@ nav {
     max-width: 252px;
   }
 
-  .information-content {
+  &-content {
     border-bottom: 1px solid var(--border-brand-04);
     padding-bottom: 80px;
-  }
-
-  &-content {
-    @include md {
-      display: flex;
-      justify-content: space-between;
-    }
 
     .archi {
 
