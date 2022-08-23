@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./mixins";
 @import "../bootstrap/css/bootstrap.css";
+@import "./service";
 
 body {
   background: $body-bg-light  !important;
@@ -41,7 +42,6 @@ h4 {
 
 h5 {
   @include text-font(15px, 28px);
-  color: var(--text-brand-02);
 }
 
 h6 {
@@ -66,6 +66,10 @@ h6 {
   h4 {
     max-width: 576px !important;
     padding-top: 24px;
+  }
+
+  h5 {
+    color: var(--text-brand-02);
   }
 }
 
@@ -177,6 +181,10 @@ nav {
     a {
       @include button-font($section-color: true);
     }
+  }
+  &-track {
+    display: flex !important;
+    // gap: 72px;
   }
 }
 

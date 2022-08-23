@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./mixins";
+@import "../bootstrap/css/bootstrap.css";
+
+.hero-content-service {
+  a {
+    @include a-font ($border-color: true);
+    &:hover {
+      @include a-hover;
+    }
+  }
+
+  .row {
+    @include xxl {
+      gap: 72px !important;
+    }
+  }
+}
+
+#introducing {
+  .button {
+    padding-top: 48px;
+  }
+}
