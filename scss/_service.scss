@@ -12,7 +12,7 @@
 
   .row {
     @include xxl {
-      gap: 72px !important;
+      gap: $gap*9 !important;
     }
   }
 }
