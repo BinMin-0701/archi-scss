@@ -1,6 +1,5 @@
 @import "./variables";
 @import "./mixins";
-@import "../bootstrap/css/bootstrap.min.css";
 @import "./service";
 @import "./team";
 
@@ -9,6 +8,7 @@ body {
   max-width: 1920px;
   @include text-font(16px, 28px);
   font-family: "Satoshi Light" !important;
+  
 }
 
 h1, h3, h4, h5, p {
