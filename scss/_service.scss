@@ -4,7 +4,6 @@
 
 .hero-content-service {
   a {
-    // @include a-font ($border-color: true);
     &:hover {
       @include a-hover;
     }
@@ -12,7 +11,7 @@
 
   .row {
     @include media-breakpoint-up (xxl) {
-      gap: $gap*9 !important;
+      gap: $gap*9;
     }
   }
 }

@@ -18,8 +18,13 @@
 .btn-light {
   border: 1px solid var(--text-gray-900);
   color: var(--text-gray-900);
+  background: transparent;
   &:hover {
     background: $body-bg-dark;
     color: var(--bs-white);
   }
+}
+
+#contact_us {
+  background: $body-bg-light;
 }

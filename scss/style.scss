@@ -234,8 +234,19 @@ h6 {
 
 // awards
 .awards {
+  @include media-breakpoint-up (lg){
+    &-img {
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: calc(50% + 190px);
+    }
+  }
+
   @include media-breakpoint-up (lg) {
-    display: flex;
+    // display: flex;
   }
 
   img {
@@ -249,8 +260,15 @@ h6 {
   }
 
   &-content {
-    max-width: 684px !important;
-
+    justify-content: flex-end;
+    &-justify-content-end {
+      @include media-breakpoint-up (lg) {
+        justify-content: center;
+      }
+      @include media-breakpoint-up (xxl) {
+        justify-content: flex-end;
+      }
+    }
     &-list {
       padding: 48px 0;
 
