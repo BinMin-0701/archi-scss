@@ -2,89 +2,18 @@
 
 // Size - Line-height - font-weight
 @mixin text-font ($font-size, $line-height, $font-w: 400) {
-  font-size: $font-size !important;
-  line-height: $line-height !important;
-  font-weight: $font-w !important;
-  margin: 0 !important;
-}
-
-// Button
-@mixin button-font( $section-color: flase) {
-  padding: 18px 36px;
-  color: var(--text-gray-900) !important;
-  border-radius: unset;
-  border: 1px solid var(--border-gray-900) !important;
-
-  @if $section-color == true {
-    color: var(--bs-white) !important;
-    border: 1px solid var(--bs-white) !important;
-  }
-}
-
-//button Hover
-@mixin btn-hover ($bg: light) {
-  background: var(--bs-gray-900) !important;
-  color: var(--bs-white) !important;
-
-  //dark
-  @if $bg == dark {
-    background: var(--bs-white) !important;
-    color: var(--text-gray-900) !important;
-  }
-}
-
-@mixin calc($max-width){
-  width: calc(100% - ((100% - $max-width)/2 + 12px));
-}
-
-// link a
-@mixin a-font ($border-color: false) {
-  border-bottom: 1px solid var(--border-gray-700) !important;
-  color: var(--bs-white);
-  padding-bottom: 4px;
-  
-  @if $border-color == true {
-    border-bottom: 1px solid var(--border-brand-04) !important;
-    color: var(--border-gray-900) !important;
-  }
+  font-size: $font-size ;
+  line-height: $line-height ;
+  font-weight: $font-w;
+  margin: 0;
 }
 
 //link a hover
 @mixin a-hover {
-  color: var(--bs-red) !important;
-  border-color: var(--bs-red) !important;
+  color: var(--bs-red);
+  border-color: var(--bs-red);
 }
 
-// breakpoints
-@mixin sm {
-  @media (min-width: map-get($breakpoints, 'sm')) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media (min-width: map-get($breakpoints, 'md')) {
-    @content;
-  }
-}
-
-@mixin lg {
-  @media (min-width: map-get($breakpoints, 'lg')) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media (min-width: map-get($breakpoints, 'xl')) {
-    @content;
-  }
-}
-
-@mixin xxl {
-  @media (min-width: map-get($breakpoints, 'xxl')) {
-    @content;
-  }
-}
 
 
 

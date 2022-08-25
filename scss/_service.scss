@@ -1,16 +1,17 @@
+@import "../bootstrap/scss/bootstrap.scss";
 @import "./variables";
 @import "./mixins";
 
 .hero-content-service {
   a {
-    @include a-font ($border-color: true);
+    // @include a-font ($border-color: true);
     &:hover {
       @include a-hover;
     }
   }
 
   .row {
-    @include xxl {
+    @include media-breakpoint-up (xxl) {
       gap: $gap*9 !important;
     }
   }

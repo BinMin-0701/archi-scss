@@ -1,10 +1,11 @@
+@import "../bootstrap/scss/bootstrap.scss";
 @import "./variables";
 @import "./mixins";
 
 .introducing-team {
   gap: $gap;
   padding-top: 48px;
-  @include sm {
+  @include media-breakpoint-up (sm) {
     gap: $gap*9;
   }
 }

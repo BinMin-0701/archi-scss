@@ -1,0 +1,25 @@
+@import "../bootstrap/scss/bootstrap.scss";
+@import "./variables";
+
+.btn {
+  @include button-size (18px, 32px, 16px, none);
+}
+
+.btn-dark {
+  background: transparent;
+  border: 1px solid var(--bs-white);
+  color: var(--bs-white);
+  &:hover {
+    background: $body-bg-light;
+    color: var(--text-gray-900);
+  }
+}
+
+.btn-light {
+  border: 1px solid var(--text-gray-900);
+  color: var(--text-gray-900);
+  &:hover {
+    background: $body-bg-dark;
+    color: var(--bs-white);
+  }
+}
